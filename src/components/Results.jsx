@@ -20,7 +20,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 
 function Results({ routeName }) {
     const [res, setRes] = React.useState([])
-    const { data, isLoading, error } = useSWR('https://sheet.best/api/sheets/249b0e30-cf60-4ba8-9012-c5986052c0d1', fetcher)
+    const { data, isLoading, error } = useSWR('https://script.google.com/macros/s/AKfycbzINxQhoCg4CuhsOWjN4ZeSn3sE7dCSTh90Fy0LCQKiJC7RdFHa9oAzQ3kJ8YYKl7oX7Q/exec', fetcher)
     const searchParams = new URLSearchParams(window.location.search)
     const [loader, setLoader] = React.useState(false)
 
